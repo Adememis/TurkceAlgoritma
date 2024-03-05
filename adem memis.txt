@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+void main()
+{
+    int satir,sutun;
+    printf("Satir sayisini giriniz: ");
+    scanf("%d",&satir);
+    printf("Sutun sayisini giriniz: ");
+    scanf("%d",&sutun);
+    int m1[satir][sutun];
+    int m2[satir][sutun];
+    int i,j;
+    for(i=0;i<satir;i++)
+    {
+        for(j=0;j<sutun;j++)
+        {
+            printf("[%d][%d] -->",i+1,+j+1);
+            scanf("%d",&m1[i][j]);
+        }
+    }
+    printf("\n\n");
+    int a,b;
+    for(a=0;a<satir;a++)
+    {
+        for(b=0;b<sutun;b++)
+        {
+            printf("[%d][%d] -->",a+1,b+1);
+            scanf("%d",&m2[a][b]);
+        }
+    }
+    int toplam[satir][sutun];
+    int k,l;
+    for(k=0;k<satir;k++);
+    {
+        for(l=0;l<sutun;l++);
+        {
+            toplam[k][l]=m1[k][l]+m2[k][l];
+        }
+    }
+    int u,o;
+    for(u=0;u<satir;u++)
+    {
+        for(o=0;o<sutun;o++)
+        {
+            printf("%d",toplam[u][o]);
+        }
+        printf("\n");
+    }
+}
